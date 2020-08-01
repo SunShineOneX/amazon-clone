@@ -11,6 +11,30 @@
     margin-top: 18px;
 }
 
+.header__link {
+    color:white;
+    text-decoration: none;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
 .header__search {
     display: flex;
     flex: 1;
