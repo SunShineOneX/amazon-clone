@@ -11,6 +11,10 @@ export const initialState = {
   ],
   user: null,
 };
+export const getBasketTotal = (basket) => 
+basket?.reduce((amount, item) => item.price + amount, 0);
+// This is incrementing all of the prices inside of the basket, starting at 0 and
+// returns that number
 
 const reducer = (state, action) => {
   // This console log IS SUPER important.
@@ -42,7 +46,7 @@ const reducer = (state, action) => {
               `can't remove product (id: ${action.id} as its not in basket`
           );
       }
-
+        // Return state but with a new basket
       return { ...state, basket: newBasket };
     default:
       return state;
